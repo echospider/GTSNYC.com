@@ -1,0 +1,12 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Masters/Site.master" AutoEventWireup="false" CodeFile="Internal.master.cs" Inherits="Masters_Internal" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <asp:ContentPlaceHolder ID="head" runat='server'></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    <asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolder1"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="cphFeaturedProducts" runat="server">
+    <asp:ContentPlaceHolder runat="server" ID="cphFeaturedProducts"></asp:ContentPlaceHolder>
+</asp:Content>
+

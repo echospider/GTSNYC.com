@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="GTSNYC" Class="DatabaseDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=sql.emagid.com;Initial Catalog=GTSNYC;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="GTSNYCConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Pages" Member="ContentPages">
+    <Type Name="ContentPage">
+      <Column Name="PageId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(150)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" UpdateCheck="Always" IsDelayLoaded="true" />
+      <Column Name="MetaKeywords" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" UpdateCheck="Always" IsDelayLoaded="true" />
+      <Column Name="Summery" Type="System.String" DbType="NVarChar(2048)" CanBeNull="true" UpdateCheck="Always" IsDelayLoaded="true" />
+      <Column Name="Body" Type="System.String" DbType="NText" CanBeNull="true" IsDelayLoaded="true" />
+      <Column Name="DateCreated" AutoSync="Never" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" UpdateCheck="Always" IsVersion="true" />
+      <Column Name="DisplayOrder" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" UpdateCheck="Always" />
+      <Column Name="UniqueName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" UpdateCheck="Always" />
+      <Column Name="PageTitle" Type="System.String" DbType="VarChar(150)" CanBeNull="true" UpdateCheck="Always" IsDelayLoaded="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Products" Member="Products">
+    <Type Name="Product">
+      <Column Name="ProductId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Summery" Type="System.String" DbType="NVarChar(512)" CanBeNull="true" />
+      <Column Name="Body" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DateCreated" AutoSync="Never" Type="System.DateTime" DbType="DateTime NOT NULL" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DisplayOrder" AutoSync="Never" Type="System.Byte" DbType="TinyInt NOT NULL" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UniqueName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ImageUrl" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Writeup" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Contract" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="IsFeatured" Type="System.Boolean" DbType="bit NOT NULL" CanBeNull="false" />
+      <Column Name="FileUrl" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Association Name="Category_Product" Member="Category" ThisKey="CategoryId" Type="Category" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Categories" Member="Categories">
+    <Type Name="Category">
+      <Column Name="CategoryId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayOrder" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="UniqueName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Category_Product" Member="Products" OtherKey="CategoryId" Type="Product" />
+    </Type>
+  </Table>
+</Database>

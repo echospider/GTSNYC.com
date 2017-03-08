@@ -1,0 +1,89 @@
+body {
+	background-image: url(images/gtsnyc_01.jpg);
+	background-repeat: repeat-x;
+	background-color: #A0BBB4;
+}
+.title {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 30px;
+	color: #2d4c7c;
+	line-height: 36px;
+}
+.title_right {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 24px;
+	color: #2d4c7c;
+	line-height: 36px;
+}
+body,td,th {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: #484b51;
+}
+.footer_text {
+	font-size: 10px;
+}
+
+a:link {
+	color: #339966;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #339966;
+}
+a:hover {
+	text-decoration: none;
+	color: #3D5853;
+}
+a:active {
+	text-decoration: none;
+	color: #339966;
+}
+
+
+.footera:link {
+	color: #484b51;
+	text-decoration: none;
+}
+.footera:visited {
+	text-decoration: none;
+	color: #484b51;
+}
+.footera:hover {
+	text-decoration: none;
+	color: #000000;
+}
+.footera:active {
+	text-decoration: none;
+	color: #484b51;
+}
+
+
+.blueUnderlinedTitle
+{
+
+	font-family: "Times New Roman", Times, serif;
+	font-size: 24px;
+	color: #2d4c7c;
+	line-height: 36px;
+	padding-bottom:5px;
+	background:url(images/gtsnyc_32.jpg) repeat-x bottom;
+}
+
+.leftColumn
+{
+	width:490px; float:left;
+	 
+}
+
+
+
+
+.rightColumn
+{
+	background:url(images/gtsnyc_28.jpg) repeat-y left;
+	width:230px; 
+	display:inline; 
+	
+}

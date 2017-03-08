@@ -1,0 +1,15 @@
+﻿*{font-family:Arial;}
+
+body  ,td,div, p
+{
+	font-size:12px;
+}
+
+a:visited, a:active, a{color:#00f ;}
+a:hover{color:#f00;}
+
+.CommonDV{}
+
+.CommonDV .__Fieldheader{color:#333; font-weight:bold; vertical-align:top; padding:5px; text-align:right;}
+
+.LeftNavBar{border:1px solid #333; padding:15px;}

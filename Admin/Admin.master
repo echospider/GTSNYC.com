@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table>
+        <tr valign="top">
+            <td class="LeftNavBar">
+                <strong>Content</strong><br />
+                <asp:HyperLink runat="server" ID="hlPages" NavigateUrl="~/Admin/Pages.aspx">Pages</asp:HyperLink><br />
+                <br />
+                <br />
+                
+                <strong>Systems</strong><br />
+                <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/Admin/Categories.aspx">Categories</asp:HyperLink><br />
+                <asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="~/Admin/Products.aspx">Systems</asp:HyperLink><br />
+                <br />
+                <br />
+                
+                <strong>Settings</strong><br />
+                <asp:HyperLink runat="server" ID="HyperLink3" NavigateUrl="~/Admin/Settings.aspx">Settings</asp:HyperLink><br />
+                
+                <br />
+                <br />
+                <a href="/" target="_blank">Back to the site</a>
+            </td>
+            <td style="padding:10px;">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" />
+            </td>
+        </tr>
+    </table>
+        
+        
+    </form>
+</body>
+</html>
